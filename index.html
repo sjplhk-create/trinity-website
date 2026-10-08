@@ -44,10 +44,7 @@
     height: auto !important;
     overflow: visible !important;
   }
-header, .wrap.nav {
-    height: auto !important;
-    overflow: visible !important;
-}
+
   .wrap.nav {
     display: flex;
     justify-content: space-between;
@@ -111,7 +108,12 @@ header, .wrap.nav {
   .form-actions{display:block}
   .form-actions span{display:block;text-align:left;margin-top:18px}
   .inquiry-form{padding:22px}
-}</style></head>
+}
+header, .wrap.nav {
+    height: auto !important;
+    overflow: visible !important;
+}
+</style></head>
 <script>
   function toggleMenu() {
     const menu = document.querySelector('.menu');
