@@ -32,23 +32,7 @@
     font-size: 16px; 
     font-weight: 600; /* 필요하면 두께감도 조절 가능합니다 */
   }
-@media(max-width:800px){
-  /* 모바일 화면 헤더 정렬 */
-  .wrap.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-  }
-  
-  /* 모바일에서 삼지창 버튼 보이기 */
-  .menu-toggle {
-    display: block;
-  }
-
-  /* 평소에는 모바일 메뉴 숨기기 */
-  /* 브랜드 로고 영역 스타일 정돈 */
+   /* 브랜드 로고 영역 스타일 정돈 */
 .brand {
     display: flex;
     align-items: center;
@@ -77,6 +61,23 @@
     letter-spacing: .08em;
     margin-top: -2px;
 }
+@media(max-width:800px){
+  /* 모바일 화면 헤더 정렬 */
+  .wrap.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+  }
+  
+  /* 모바일에서 삼지창 버튼 보이기 */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* 평소에는 모바일 메뉴 숨기기 */
+ 
   .menu {
     display: none;
     position: absolute;
