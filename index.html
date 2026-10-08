@@ -32,7 +32,12 @@
     font-size: 16px; 
     font-weight: 600; /* 필요하면 두께감도 조절 가능합니다 */
   }
-  
+.brand img {
+    height: 40px !important;     /* 높이를 강제로 40픽셀로 고정 */
+    max-height: 40px !important; /* 최대 높이도 40픽셀로 제한 */
+    width: auto !important;      /* 가로폭은 비율에 맞게 자동 조절 */
+    object-fit: contain;
+}  
 @media(max-width:800px){
   /* 모바일 화면 헤더 정렬 */
   .wrap.nav {
