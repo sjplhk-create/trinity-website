@@ -39,7 +39,7 @@
     object-fit: contain;
 }  
 @media(max-width:800px){
-  /* 헤더와 내비게이션 박스 높이 제한 해제 및 여백 확보 */
+  /* 헤더와 내비게이션 박스 높이 제한 전면 해제 및 충분한 여백 확보 */
   header {
     height: auto !important;
     overflow: visible !important;
@@ -52,29 +52,28 @@
     flex-direction: row;
     position: relative;
     height: auto !important;
-    min-height: 80px;
-    padding: 10px 0;
+    min-height: 85px !important; /* 65px 로고가 넉넉히 들어갈 최소 높이 */
+    padding: 12px 15px !important;  /* 상하좌우 여백 안전하게 확보 */
+    overflow: visible !important;
   }
-.brand {
-    font-size: 16px !important; /* 모바일에서 글자 크기를 살짝 줄여서 줄바꿈 최적화 */
-    gap: 8px !important;       /* 이미지와 글자 사이 간격 조절 */
+
+  .brand {
+    font-size: 16px !important; /* 모바일 글자 크기 최적화 */
+    gap: 8px !important;       /* 이미지와 텍스트 사이 간격 */
   }
   
-  .wrap.nav {
-    padding: 12px 15px !important; /* 상하 여백을 넉넉하게 주어 절대 안 잘리게 함 */
-  }
   .brand img {
     height: 65px !important;
     max-height: none !important;
+    width: auto !important;
   }
   
-  /* 모바일에서 삼지창 버튼 보이기 */
+  /* 모바일 삼지창 버튼 보이기 */
   .menu-toggle {
     display: block;
   }
 
-  /* 평소에는 모바일 메뉴 숨기기 */
- 
+  /* 모바일 메뉴 스타일 */
   .menu {
     display: none;
     position: absolute;
@@ -92,7 +91,6 @@
     z-index: 1000;
   }
 
-  /* 삼지창을 눌러서 active가 되면 메뉴가 촥 펼쳐짐 */
   .menu.active {
     display: flex;
   }
@@ -109,23 +107,6 @@
   .form-actions span{display:block;text-align:left;margin-top:18px}
   .inquiry-form{padding:22px}
 }
-header, .wrap.nav {
-    height: auto !important;
-    overflow: visible !important;
-}
-</style></head>
-<script>
-  function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-  }
-
-  // 모바일에서 메뉴 링크를 누르면 이동하면서 메뉴가 닫히도록 설정
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelector('.menu').classList.remove('active');
-    });
-  });
 </script>
 
 <body><header>
